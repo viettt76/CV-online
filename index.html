@@ -56,7 +56,9 @@
         width: 793.7008px;
         height: 1122.5197px;
         background-color: #fff;
+        display: flex;
       }
+
       .container-left {
         width: 45%;
       }
@@ -75,13 +77,12 @@
         left: 30%;
         padding: 12px;
         background-color: #fff;
-        width: 180px;
-        height: 180px;
+
         border-radius: 50%;
       }
       .avatar {
-        width: 100%;
-        height: 100%;
+        width: 180px;
+        height: 180px;
         border-radius: 50%;
         border: 3px solid #27384c;
       }
@@ -135,6 +136,9 @@
         margin-bottom: 10px;
         margin-top: 10px;
       }
+      .job {
+        font-size: 20px;
+      }
       .skill-item:first-child {
         margin-top: 24px;
       }
@@ -173,10 +177,70 @@
       .project-item div {
         line-height: 1.6;
       }
+
+      @media (max-width: 740px) {
+        .container {
+          width: 100%;
+          height: unset;
+          display: block;
+        }
+        .container-left {
+          width: 100%;
+        }
+        .content-left {
+          padding-right: 50px;
+        }
+        .container-right {
+          margin-right: 0;
+          margin-left: 90px;
+        }
+        .full-name {
+          margin-left: -20px;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+        }
+        .full-name > h1 {
+          margin-right: 10px;
+        }
+        .job {
+          width: 100%;
+          text-align: center;
+          margin-left: -20px;
+        }
+        .container-right .title {
+          margin-left: -20px;
+          width: 93%;
+        }
+        .skill-item {
+          width: 80%;
+        }
+        .project-item div {
+          width: 85%;
+        }
+      }
+
+      @media (max-width: 740px) and (min-width: 468px) {
+        .square {
+          display: none;
+        }
+        .avatar-cover {
+          overflow: hidden;
+          position: unset;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          padding: 0;
+          padding-top: 20px;
+        }
+        .about-me {
+          margin-top: -30px;
+        }
+      }
     </style>
   </head>
   <body>
-    <div class="container d-flex">
+    <div class="container">
       <div class="container-left">
         <div class="wrapper-avatar">
           <div class="square"></div>
@@ -188,7 +252,7 @@
             />
           </div>
         </div>
-        <div class="pl-7 pt-5">
+        <div class="content-left pl-7 pt-5">
           <div class="d-flex align-items-center flex-column">
             <h4 class="about-me">About me</h4>
             <p class="text-center about-me-text">
@@ -230,11 +294,11 @@
         </div>
       </div>
       <div class="container-right">
-        <div>
+        <div class="full-name">
           <h1>HOÀNG</h1>
           <h1>QUỐC VIỆT</h1>
         </div>
-        <div style="font-size: 20px">Full-stack Web Intern</div>
+        <div class="job">Full-stack Web Intern</div>
         <div>
           <div class="title mt-5">Skills Summary</div>
           <div>
